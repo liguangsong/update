@@ -1,0 +1,127 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.3.21
+3 info using node@v0.11.10-pre
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/lg/haha/update',
+5 verbose install   [ 'express', 'ejs', 'qiniu', 'Access-Control-Allow-Origin' ] ]
+6 info preinstall application-name@0.0.1
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping express@3.4.8 /home/lg/haha/update
+9 verbose already installed skipping ejs@* /home/lg/haha/update
+10 verbose cache add [ 'qiniu@*', null ]
+11 verbose cache add name=undefined spec="qiniu@*" args=["qiniu@*",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'qiniu@*',
+12 verbose parsed url   path: 'qiniu@*',
+12 verbose parsed url   href: 'qiniu@*' }
+13 verbose cache add name="qiniu" spec="*" args=["qiniu","*"]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: '*',
+14 verbose parsed url   path: '*',
+14 verbose parsed url   href: '*' }
+15 verbose addNamed [ 'qiniu', '*' ]
+16 verbose addNamed [ null, '*' ]
+17 verbose cache add [ 'Access-Control-Allow-Origin@*', null ]
+18 verbose cache add name=undefined spec="Access-Control-Allow-Origin@*" args=["Access-Control-Allow-Origin@*",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'Access-Control-Allow-Origin@*',
+19 verbose parsed url   path: 'Access-Control-Allow-Origin@*',
+19 verbose parsed url   href: 'Access-Control-Allow-Origin@*' }
+20 verbose cache add name="Access-Control-Allow-Origin" spec="*" args=["Access-Control-Allow-Origin","*"]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: '*',
+21 verbose parsed url   path: '*',
+21 verbose parsed url   href: '*' }
+22 verbose addNamed [ 'Access-Control-Allow-Origin', '*' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 6636f7f0-qiniu qiniu@*
+25 verbose lock qiniu@* /home/lg/.npm/6636f7f0-qiniu.lock
+26 silly lockFile c3fdd6a1-Access-Control-Allow-Origin Access-Control-Allow-Origin@*
+27 verbose lock Access-Control-Allow-Origin@* /home/lg/.npm/c3fdd6a1-Access-Control-Allow-Origin.lock
+28 silly addNameRange { name: 'qiniu', range: '*', hasData: false }
+29 silly addNameRange { name: 'Access-Control-Allow-Origin',
+29 silly addNameRange   range: '*',
+29 silly addNameRange   hasData: false }
+30 verbose url raw Access-Control-Allow-Origin
+31 verbose url resolving [ 'https://registry.npmjs.org/',
+31 verbose url resolving   './Access-Control-Allow-Origin' ]
+32 verbose url resolved https://registry.npmjs.org/Access-Control-Allow-Origin
+33 info trying registry request attempt 1 at 11:07:51
+34 http GET https://registry.npmjs.org/Access-Control-Allow-Origin
+35 verbose url raw qiniu
+36 verbose url resolving [ 'https://registry.npmjs.org/', './qiniu' ]
+37 verbose url resolved https://registry.npmjs.org/qiniu
+38 info trying registry request attempt 1 at 11:07:51
+39 verbose etag "55MTZ7D6ZL82TY848FPYXV7M4"
+40 http GET https://registry.npmjs.org/qiniu
+41 http 304 https://registry.npmjs.org/qiniu
+42 silly registry.get cb [ 304,
+42 silly registry.get   { date: 'Fri, 14 Feb 2014 03:07:52 GMT',
+42 silly registry.get     server: 'Apache',
+42 silly registry.get     connection: 'close',
+42 silly registry.get     etag: '"55MTZ7D6ZL82TY848FPYXV7M4"',
+42 silly registry.get     'cache-control': 'max-age=1',
+42 silly registry.get     vary: 'Accept' } ]
+43 verbose etag qiniu from cache
+44 http 404 https://registry.npmjs.org/Access-Control-Allow-Origin
+45 silly registry.get cb [ 404,
+45 silly registry.get   { date: 'Fri, 14 Feb 2014 03:07:52 GMT',
+45 silly registry.get     server: 'nginx/1.4.2',
+45 silly registry.get     'content-type': 'application/json',
+45 silly registry.get     'accept-ranges': 'bytes',
+45 silly registry.get     via: '1.1 varnish',
+45 silly registry.get     'cache-control': 'max-age=0',
+45 silly registry.get     'content-length': '52',
+45 silly registry.get     age: '0',
+45 silly registry.get     'x-served-by': 'cache-v41-ASH, cache-lax1423-LAX',
+45 silly registry.get     'x-cache': 'MISS, MISS',
+45 silly registry.get     'x-cache-hits': '0, 0',
+45 silly registry.get     'x-timer': 'S1392347272.659255981,VS0,VS33,VE135,VE166',
+45 silly registry.get     connection: 'close' } ]
+46 silly lockFile c3fdd6a1-Access-Control-Allow-Origin Access-Control-Allow-Origin@*
+47 silly lockFile c3fdd6a1-Access-Control-Allow-Origin Access-Control-Allow-Origin@*
+48 error 404 'Access-Control-Allow-Origin' is not in the npm registry.
+48 error 404 You should bug the author to publish it
+48 error 404
+48 error 404 Note that you can also install from a
+48 error 404 tarball, folder, or http url, or git url.
+49 error System Linux 3.8.0-19-generic
+50 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+51 error cwd /home/lg/haha/update
+52 error node -v v0.11.10-pre
+53 error npm -v 1.3.21
+54 error code E404
+55 verbose exit [ 1, true ]

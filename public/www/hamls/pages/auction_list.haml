@@ -1,0 +1,45 @@
+%header(id='synchronous')
+  竞价
+  %div(class = "header-right")
+    %button( class="btn btn-primary" ng-tap="go_to_auction_list()" ng-disabled="is_able")
+      开始
+
+  %div(class = "header-left" )
+    %a(class="side-slide-trigger btn btn-primary" ng-tap="go_to_activity_list()")
+      返回
+
+
+
+
+%div(class="index-menu" )
+  %div(id="wrapper" class="wrapper scrollable" )
+    %div(class="wrapper-inner")
+      %div(class="form-wrapper")
+        %ul(class="list-style-2" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate3d(0px, 0px, 0);" )
+          %li( id="{{list.name}}" ng-repeat="list in auction_list" ng-tap="go_to_auction_apply_list(list)" class="{{list.status}}")
+            %h3
+              {{list.bid_name}}
+
+
+
+
+
+%footer
+  %ul(class="footer-nav footer-nav-2tabs")
+    %li
+      %a
+        %h3(ng-tap="go_to_auction()")
+          报名
+    %li(class="active")
+      %a
+        %h3
+          竞价
+
+
+
+
+
+
+
+
+

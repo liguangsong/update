@@ -1,0 +1,14 @@
+source 'https://rubygems.org'
+
+gem 'haml'
+gem 'thor'
+gem 'jt-partial', "1.0.3"
+gem 'moode-haml-toolkit', "1.1.6"
+gem 'sinatra'
+gem 'rack'
+gem 'rubygems'
+gem "rqrcode"
+gem "qr_image"
+gem 'moode-haml-component-angular', "0.0.3"
+
+

@@ -1,0 +1,20 @@
+%header(id='synchronous')
+  创建活动
+  %div(class = "header-left" ng-tap="go_to_activity_list()" ng-show="show"  )
+    %a( class="side-slide-trigger btn btn-primary")
+      返回
+%div(class="index-menu" )
+  %div(id="wrapper" class="wrapper scrollable" )
+    %div(class="wrapper-inner")
+      %div(class="form-wrapper")
+        %div(class="text-center" )
+          %p
+            活动名称
+          %input(id="put" ng-model="activity_name"  style="width:80%" )
+          %h5(ng-show="warning_show")
+            名称已存在
+          %button(class="btn btn-large" ng-tap="creat_activity()" ng-disabled="!activity_name" style="width:80%;")
+            创建
+
+
+

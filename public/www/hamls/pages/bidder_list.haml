@@ -1,0 +1,55 @@
+%header(id='synchronous')
+  {{list_auction_name}}({{number}}人）
+  %div(class = "header-right")
+    %button( class="btn btn-primary" ng-tap="stop_bid()" ng-show="!footer_show" )
+      结束
+  %div(class = "header-right")
+    %button( class="btn btn-primary" ng-show="statistics_show  " ng-tap="statistics()")
+      统计
+
+  %div(class = "header-right")
+    %button( class="btn btn-primary" ng-show="list_show"ng-tap="list()")
+      列表
+
+  %div(class = "header-left" )
+    %a(class="side-slide-trigger btn btn-primary"  ng-tap="back()")
+      返回
+
+
+
+
+%div(class="index-menu" id="bidder_list"  )
+  %div(id="wrapper" class="wrapper scrollable" )
+    %div(class="wrapper-inner")
+      %div(class="form-wrapper")
+        %ul(class="list-style-2" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate3d(0px, 0px, 0);" )
+          %li( ng-repeat="list in bidder_list_name_and_phone_and_price "ng-show="bidder_list_show")
+            %h3
+              {{list.name}}
+            %p
+              {{list.phone}}
+            %i(ng-show="footer_show")
+              {{"￥"+list.price}}
+
+        %ul(class="list-style-2" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate3d(0px, 0px, 0);" )
+          %li( ng-repeat="list in list_price_and_number " ng-show="!bidder_list_show")
+            %h3
+              {{"￥"+list.price}}
+
+            %i
+              {{list.number+"人"}}
+
+
+%footer(class="text-center" ng-show="footer_show")
+  {{sort}}
+
+
+
+
+%div(ng-switch="pop_out_modal")
+  %div(ng-switch-when="true" class="modal hide fade in" style="display:block;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" )
+    %div(class="modal-header")
+      %button(type="button" class="close" style="float:right" ng-tap="close_modal()")×
+      %h4(style="text-align:center;")竞价结果
+    %div(class="modal-body" style="text-align:center;")
+      %h5 {{sort}}
